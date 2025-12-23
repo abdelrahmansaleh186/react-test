@@ -29,7 +29,7 @@ export default function Content() {
   };
 
   const [Arraydevices, Setarray] = useState(data.devices); //array to the devices
-  const [Arrayperfume,setArrayperfume]=useState(data.perfumes)
+ 
   const [Newname, Setname] = useState(""); //add name
   const [Newbrand, Setnewbrand] = useState("");
   const [Error, Seterror] = useState(""); //error massege
@@ -37,19 +37,19 @@ export default function Content() {
   const [Editename, Setedit] = useState("");
 
   function Addname() {
-    Setarray([...Array, { id: Nextid, name: Newname, brand: Newbrand }]);
+    Setarray([...Arraydevices, { id: Nextid, name: Newname, brand: Newbrand }]);
     Nextid++;
     Setname("");
     Setnewbrand("");
   }
 
   function Handledeletebtn(id) {
-    Setarray(Array.filter((device) => device.id !== id));
+    Setarray(Arraydevices.filter((device) => device.id !== id));
   }
 
   function Handlingedit(id) {
     Setarray(
-      Array.map((device) =>
+      Arraydevices.map((device) =>
         device.id === id ? { ...device, name: Editename } : device,
       ),
     );
