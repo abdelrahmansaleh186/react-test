@@ -1,22 +1,29 @@
-import "./App.css";
 import { useState } from "react";
+import { Routes, Route, Link } from "react-router-dom";
+import "./App.css";
+import Home from "./componantes/Home.jsx";
+import About from "./componantes/content2.jsx";
 import Content from "./componantes/content.jsx";
+import Contact from "./componantes/content3.jsx";
+import Login from "./componantes/login.jsx";
 
 function App() {
-  const [count, SetCount] = useState(0);
-  const c = count;
-  function Add() {
-    SetCount(count + 1);
-    SetCount((c) => {
-      return c + 1;
-    });
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  // if NOT logged in → show login only
+  if (!isLoggedIn) {
+    return <Login onLogin={() => setIsLoggedIn(true)} />;
   }
 
+  // if logged in → show site
   return (
     <>
-      <div>
-        <Content />
-      </div>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/products" element={<Content />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
     </>
   );
 }

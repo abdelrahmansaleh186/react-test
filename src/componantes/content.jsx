@@ -1,6 +1,7 @@
 // content.jsx
 import data from "./data/data.json";
 import { useState } from "react";
+import Nav from "./Nav";
 // variable to start count the new id
 let Nextid = 10;
 
@@ -29,7 +30,7 @@ export default function Content() {
   };
 
   const [Arraydevices, Setarray] = useState(data.devices); //array to the devices
- 
+
   const [Newname, Setname] = useState(""); //add name
   const [Newbrand, Setnewbrand] = useState("");
   const [Error, Seterror] = useState(""); //error massege
@@ -66,7 +67,8 @@ export default function Content() {
 
   return (
     <>
-      <div className="card-animated glow-effect" >
+      <Nav />
+      <div className="card-animated glow-effect">
         <h1 className="title-animated">list of Devices</h1>
         <div className="cards-container">
           {Arraydevices.map((device) => (
@@ -157,48 +159,8 @@ export default function Content() {
         </div>
       </div>
 
-  
-      <div className="card-animated glow-effect" >
+      <div className="card-animated glow-effect">
         <h1 className="title-animated">list of perfumes</h1>
-       
-
-      </div>
-      <div className="card-animated glow-effect" >
-        <h1 className="title-animated">list of customers</h1>
-      </div>
-
-      <div  className="card-animated glow-effect"  >
-        <h1 className="title-animated">list of orders</h1> <br />
-      </div>
-      <div  className="card-animated glow-effect"  >
-        <h1 className="title-animated">list of categories</h1> <br />
-      </div>
-      <div  className="card-animated glow-effect"  >
-        <h1 className="title-animated">list of employees</h1> <br />
-      </div>
-      <div  className="card-animated glow-effect"  >
-        <h1 className="title-animated">list of stores</h1> <br />
-      </div>
-      <div  className="card-animated glow-effect"  >
-        <h1 className="title-animated">list of payments</h1> <br />
-      </div>
-      <div  className="card-animated glow-effect"  >
-        <h1 className="title-animated">list of employees</h1> <br />
-      </div>
-      <div  className="card-animated glow-effect"  >
-        <h1 className="title-animated">list of employees</h1> <br />
-      </div>
-      <div  className="card-animated glow-effect"  >
-        <h1 className="title-animated">list of employees</h1> <br />
-      </div>
-      <div  className="card-animated glow-effect"  >
-        <h1 className="title-animated">list of employees</h1> <br />
-      </div>
-      <div  className="card-animated glow-effect"  >
-        <h1 className="title-animated">list of employees</h1> <br />
-      </div>
-      <div  className="card-animated glow-effect"  >
-        <h1 className="title-animated">list of employees</h1> <br />
       </div>
     </>
   );
