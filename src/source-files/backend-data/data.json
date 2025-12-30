@@ -1,0 +1,61 @@
+{
+  "devices": [
+    { "id": 1, "name": "iPhone 15", "brand": "Apple" },
+    { "id": 2, "name": "Galaxy S24", "brand": "Samsung" },
+    { "id": 3, "name": "Pixel 8", "brand": "Google" }
+  ],
+
+  "perfumes": [
+    { "id": 1, "name": "Dior Sauvage", "price": 120 },
+    { "id": 2, "name": "Bleu de Chanel", "price": 135 },
+    { "id": 3, "name": "Creed Aventus", "price": 300 }
+  ],
+
+  "customers": [
+    { "id": 1, "name": "Ahmed", "phone": "01012345678" },
+    { "id": 2, "name": "Sara", "phone": "01198765432" },
+    { "id": 3, "name": "Omar", "phone": "01255588899" }
+  ],
+
+  "orders": [
+    { "id": 1, "customerId": 1, "total": 450 },
+    { "id": 2, "customerId": 2, "total": 300 }
+  ],
+
+  "categories": [
+    { "id": 1, "name": "Electronics" },
+    { "id": 2, "name": "Perfumes" },
+    { "id": 3, "name": "Accessories" }
+  ],
+
+  "employees": [
+    { "id": 1, "name": "Mohamed", "role": "Admin" },
+    { "id": 2, "name": "Laila", "role": "Sales" }
+  ],
+
+  "stores": [
+    { "id": 1, "name": "Cairo Store", "city": "Cairo" },
+    { "id": 2, "name": "Berlin Store", "city": "Berlin" }
+  ],
+
+  "payments": [
+    { "id": 1, "method": "Cash" },
+    { "id": 2, "method": "Credit Card" },
+    { "id": 3, "method": "PayPal" }
+  ],
+
+  "reviews": [
+    { "id": 1, "productId": 1, "rate": 5 },
+    { "id": 2, "productId": 2, "rate": 4 }
+  ],
+
+  "suppliers": [
+    { "id": 1, "name": "Global Tech" },
+    { "id": 2, "name": "Luxury Perfumes Ltd" }
+  ],
+
+  "offers": [
+    { "id": 1, "title": "Summer Sale", "discount": 20 },
+    { "id": 2, "title": "Black Friday", "discount": 40 }
+  ]
+}

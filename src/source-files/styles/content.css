@@ -1,0 +1,107 @@
+
+/* ---------- SECTIONS ---------- */
+section {
+  padding: 80px 10%;
+}
+
+/* ---------- HERO ---------- */
+.hero {
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 800;
+  background: linear-gradient(90deg, #38bdf8, #6366f1);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: #cbd5f5;
+
+  margin: auto;
+}
+
+.hero button {
+  margin-top: 20px;
+  padding: 14px 30px;
+  border: none;
+  border-radius: 30px;
+  background: linear-gradient(135deg, #38bdf8, #2563eb);
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.hero button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(56, 189, 248, 0.4);
+}
+
+/* ---------- FEATURES ---------- */
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.features div {
+  background: #1118278e;
+  padding: 30px;
+  border-radius: 16px;
+  text-align: center;
+  font-size: 1.1rem;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.features div:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* ---------- ABOUT ---------- */
+.about {
+  max-width: 700px;
+  margin: auto;
+  text-align: center;
+}
+
+.about h2 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+}
+
+.about p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #cbd5f5;
+}
+
+/* ---------- PROJECTS ---------- */
+.projects {
+  text-align: center;
+}
+
+.projects h2 {
+  font-size: 2.2rem;
+  margin-bottom: 30px;
+}
+
+.projects p {
+  color: #94a3b8;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 768px) {
+  section {
+    padding: 60px 6%;
+  }
+}
