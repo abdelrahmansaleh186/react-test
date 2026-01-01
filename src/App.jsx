@@ -24,10 +24,10 @@ import "./source-files/styles/footer.css";
 
 
 function App() {
-  //login code
+  //  login code
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [username, setUsername] = useState("");
-  // if NOT logged in → show login only
+  //  if NOT logged in → show login only
   if (!isLoggedIn) {
     return (
       <Login
@@ -42,9 +42,9 @@ function App() {
   return (
     <>
       <Routes>
-        <Route path="/" element={<Home username={username}/>} />
-        <Route path="/about" element={<About username={username}/>} />
-        <Route path="/products" element={<Products username={username}/>} />
+        <Route path="/" element={<Home/>} />
+        <Route path="/about" element={<About />} />
+        <Route path="/products" element={<Products />} />
       </Routes>
     </>
   );

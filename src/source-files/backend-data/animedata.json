@@ -1,0 +1,61 @@
+{
+  "anime": [
+    {
+      "id": 1,
+      "image": "/anime-images/attac-on-titne.webp",
+      "title": "Attack On Titan",
+      "name": "Attack On Titan",
+      "alt": "Attack On Titan"
+    },
+    {
+      "id": 2,
+      "image": "/anime-images/black-clover.webp",
+      "title": "Black Clover",
+      "name": "Black Clover",
+      "alt": "Black Clover"
+    },
+    {
+      "id": 3,
+      "image": "/anime-images/jujuitsu-kaaisun.webp",
+      "title": "Jujuitsu Kaaisun",
+      "name": "Jujuitsu Kaaisun",
+      "alt": "Jujuitsu Kaaisun"
+    },
+    {
+      "id": 4,
+      "image": "/anime-images/my-hero-academia.webp",
+      "title": "My Hero Academia",
+      "name": "My Hero Academia",
+      "alt": "My Hero Academia"
+    },
+    {
+      "id": 5,
+      "image": "/anime-images/naruto.webp",
+      "title": "Naruto",
+      "name": "Naruto",
+      "alt": "Naruto"
+    },
+    {
+      "id": 6,
+      "image": "/anime-images/one-piece.webp",
+      "title": "One Piece",
+      "name": "One Piece",
+      "alt": "One Piece"
+    },
+    {
+      "id": 7,
+      "image": "/anime-images/rudo.webp",
+      "title": "Rudo",
+      "name": "Rudo",
+      "alt": "Rudo"
+    },
+    {
+      "id": 8,
+      "image": "/anime-images/solo-leveling.webp",
+      "title": "Solo Leveling",
+      "name": "Solo Leveling",
+      "alt": "Solo Leveling"
+    }
+    
+  ]
+}
