@@ -1,6 +1,9 @@
 // router
 import { Routes, Route, Link } from "react-router-dom";
 import { useState } from "react";
+import { Helmet } from "react-helmet";
+
+
 
 
 // main components
@@ -40,7 +43,12 @@ function App() {
     );
   }
   return (
+    
     <>
+      <Helmet>
+        <title>Anime Hub</title>
+        <meta name="description" content="Anime homepage with trending shows and updates" />
+      </Helmet>
       <Routes>
         <Route path="/" element={<Home/>} />
         <Route path="/about" element={<About />} />
