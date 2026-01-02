@@ -41,29 +41,30 @@ export default function Home({ username }) {
       </section>
 
       <section className="projects">
-        <Swiper
-          modules={[Navigation, EffectCoverflow]}
-          slidesPerView={5}
-          centeredSlides={true}
-          spaceBetween={30}
-          navigation={true}
-          effect="coverflow"
-          coverflowEffect={{
-            rotate: 0,
-            stretch: 1,
-            depth: 200
-            ,
-            modifier: 1,
-            slideShadows: false,
-          }}
-        >
-          {animeData.map((item) => (
-            <SwiperSlide key={item.id}>
-              <img src={item.image} alt={item.title} loading="lazy" />
-              <h3>{item.title}</h3>
-            </SwiperSlide>
-          ))}
-        </Swiper>
+      <Swiper
+  modules={[Navigation, EffectCoverflow]}
+  slidesPerView={5}
+  centeredSlides={true}
+  spaceBetween={30}
+  navigation={true}
+  effect="coverflow"
+  coverflowEffect={{
+    rotate: 0,
+    stretch: 50,
+    depth: 300,
+    modifier: 1,
+    slideShadows: false,
+  }}
+  watchSlidesProgress={true} // important for correct z-index in production
+>
+  {animeData.map((item) => (
+    <SwiperSlide key={item.id}>
+      <img src={item.image} alt={item.title} loading="lazy" />
+      <h3>{item.title}</h3>
+    </SwiperSlide>
+  ))}
+</Swiper>
+
       </section>
       <Footer />
     </>
