@@ -2,10 +2,10 @@ import Nav from "../useable-componants/nav";
 import "../styles/header.css";
 import Footer from "../useable-componants/footer";
 import animedata from "../backend-data/animedata.json";
-import "../styles/animations.css"
+import "../styles/animations.css";
 import { useState } from "react";
 import SEO from "../useable-componants/seo.jsx";
-import Content from '../useable-componants/content';
+import Content from "../useable-componants/content";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
@@ -16,8 +16,8 @@ export default function Home({ username }) {
   const [animeData, setAnimeData] = useState(animedata.anime);
   return (
     <>
-      <SEO 
-        description="Anime homepage with trending shows and updates" 
+      <SEO
+        description="Anime homepage with trending shows and updates"
         title="Anime Hub - Home"
       />
       <Nav />
@@ -41,29 +41,28 @@ export default function Home({ username }) {
       </section>
 
       <section className="projects">
-       <Swiper
-  modules={[Navigation, EffectCoverflow]}
-  slidesPerView={5}
-  centeredSlides={true}
-  spaceBetween={30}
-  navigation={true}
-  effect="coverflow"
-  coverflowEffect={{
-    rotate: 0,
-    stretch: 2,
-    depth: 250,
-    modifier: 1,
-    slideShadows: false,
-  }}
->
-  {animeData.map((item) => (
-    <SwiperSlide key={item.id}>
-      <img src={item.image} alt={item.title} />
-      <h3>{item.title}</h3>
-    </SwiperSlide>
-  ))}
-</Swiper>
-
+        <Swiper
+          modules={[Navigation, EffectCoverflow]}
+          slidesPerView={5}
+          centeredSlides={true}
+          spaceBetween={30}
+          navigation={true}
+          effect="coverflow"
+          coverflowEffect={{
+            rotate: 0,
+            stretch: 2,
+            depth: 250,
+            modifier: 1,
+            slideShadows: false,
+          }}
+        >
+          {animeData.map((item) => (
+            <SwiperSlide key={item.id}>
+              <img src={item.image} alt={item.title} loading="lazy" />
+              <h3>{item.title}</h3>
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </section>
       <Footer />
     </>
