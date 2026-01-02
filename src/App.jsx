@@ -3,9 +3,6 @@ import { Routes, Route, Link } from "react-router-dom";
 import { useState } from "react";
 import { Helmet } from "react-helmet";
 
-
-
-
 // main components
 import Login from "./source-files/main-pages/login.jsx";
 import Home from "./source-files/main-pages/home.jsx";
@@ -25,7 +22,6 @@ import "./source-files/styles/loginform.css";
 import "./source-files/styles/bg-s/nav.css";
 import "./source-files/styles/footer.css";
 
-
 function App() {
   //  login code
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -43,14 +39,17 @@ function App() {
     );
   }
   return (
-    
     <>
       <Helmet>
         <title>Anime Hub</title>
-        <meta name="description" content="Anime homepage with trending shows and updates" />
+        <meta
+          name="description"
+          content="Anime homepage with trending shows and updates"
+        />
       </Helmet>
+
       <Routes>
-        <Route path="/" element={<Home/>} />
+        <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/products" element={<Products />} />
       </Routes>
