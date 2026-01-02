@@ -4,6 +4,7 @@ import Footer from "../useable-componants/footer";
 import animedata from "../backend-data/animedata.json";
 import "../styles/animations.css"
 import { useState } from "react";
+import SEO from "../useable-componants/seo.jsx";
 import Content from '../useable-componants/content';
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -15,6 +16,10 @@ export default function Home({ username }) {
   const [animeData, setAnimeData] = useState(animedata.anime);
   return (
     <>
+      <SEO 
+        description="Anime homepage with trending shows and updates" 
+        title="Anime Hub - Home"
+      />
       <Nav />
       <section className="hero">
         <h1>Modern Web Templates</h1>

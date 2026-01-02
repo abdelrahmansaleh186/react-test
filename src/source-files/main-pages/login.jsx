@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Swal from "sweetalert2";
+import SEO from "../useable-componants/seo.jsx";
 
 export default function Login({ onLogin }) {
   const [username, setUsername] = useState("");
@@ -37,24 +38,30 @@ export default function Login({ onLogin }) {
   }
 
   return (
-    <form onSubmit={logeq}>
-      <h2>Login</h2>
-
-      <input
-        type="text"
-        placeholder="Username"
-        value={username}
-        onChange={(e) => setUsername(e.target.value)}
+    <>
+      <SEO 
+        description="Login to access the anime hub" 
+        title="Anime Hub - Login"
       />
+      <form onSubmit={logeq}>
+        <h2>Login</h2>
 
-      <input
-        type="password"
-        placeholder="Password"
-        value={password}
-        onChange={(e) => setPassword(e.target.value)}
-      />
+        <input
+          type="text"
+          placeholder="Username"
+          value={username}
+          onChange={(e) => setUsername(e.target.value)}
+        />
 
-      <button type="submit">Login</button>
-    </form>
+        <input
+          type="password"
+          placeholder="Password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+        />
+
+        <button type="submit">Login</button>
+      </form>
+    </>
   );
 }

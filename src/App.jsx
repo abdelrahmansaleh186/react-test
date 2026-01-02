@@ -1,7 +1,8 @@
 // router
 import { Routes, Route, Link } from "react-router-dom";
 import { useState } from "react";
-import { Helmet } from "react-helmet";
+
+import SEO from"./source-files/useable-componants/seo.jsx"
 
 // main components
 import Login from "./source-files/main-pages/login.jsx";
@@ -40,13 +41,10 @@ function App() {
   }
   return (
     <>
-      <Helmet>
-        <title>Anime Hub</title>
-        <meta
-          name="description"
-          content="Anime homepage with trending shows and updates"
-        />
-      </Helmet>
+      <SEO 
+        description="Anime homepage with trending shows and updates" 
+        title="Anime Hub"
+      />
 
       <Routes>
         <Route path="/" element={<Home />} />
