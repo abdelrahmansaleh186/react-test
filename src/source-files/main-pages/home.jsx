@@ -50,8 +50,9 @@ export default function Home({ username }) {
           effect="coverflow"
           coverflowEffect={{
             rotate: 0,
-            stretch: 2,
-            depth: 250,
+            stretch: 1,
+            depth: 200
+            ,
             modifier: 1,
             slideShadows: false,
           }}
